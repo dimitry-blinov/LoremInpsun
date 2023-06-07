@@ -1,0 +1,34 @@
+{
+  "name": "LoremIpsum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "develop": "webpack --node-env development",
+    "build": "webpack --node-env production"
+  },
+  "author": "dmitryblinov <d.o.blinov@mail.ru>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "autoprefixer": "^10.4.0",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.5.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^6.0.1",
+    "copy-webpack-plugin": "^11.0.0",
+    "imagemin-webp-webpack-plugin": "^3.3.6",
+    "mini-css-extract-plugin": "^2.4.3",
+    "postcss-cli": "^10.1.0",
+    "postcss-critical-split": "^2.5.3",
+    "postcss-loader": "^7.3.0",
+    "postcss-pipeline-webpack-plugin": "^6.0.0",
+    "node-sass": "^8.0.0",
+    "sass-loader": "^13.2.2",
+    "terser-webpack-plugin": "^5.2.4",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "repository": "git@github.com:dimitry-blinov/LoremIpsum.git"
+}
