@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -16,7 +17,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist/js'),
     filename: '[name].js',
   },
-  watch: process.env.NODE_ENV == 'production' ? false : true,
+  watch: process.env.NODE_ENV !== 'production',
   module: {
     rules: [
       {
@@ -110,3 +111,4 @@ module.exports = {
     ]
   },
 };
+

@@ -9,6 +9,178 @@
   <script src="./dist/js/index.js"></script>
 </head>
 <body>
+<header class="header">
+  <div class="header__container">
+    <a class="header__logobox" href="/">
+      <svg class="header__logo">
+        <use xlink:href="dist/images/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="/" class="nav__link nav__link--blue">Бизнес</a>
+        </li>
+        <li class="nav__item">
+          <a href="/" class="nav__link">О&nbsp;нас</a>
+        </li>
+        <li class="nav__item">
+          <a href="/" class="nav__link">Цены</a>
+        </li>
+        <li class="nav__item">
+          <a href="/" class="nav__link">Оформить заказ</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="main">
+  <section id="home" class="home">
+    <div class="container home__container">
+      <h1 class="title main__title">
+        <span class="title__highlighted">Lorem ipsum</span> dolor sit amet consectetur <span class="title__highlighted">adipiscing</span>
+      </h1>
 
+      <div class="home__info">
+        <h4 class="home__header">
+          At vero eos et accusamus et iusto odio dignissimos ducimus!
+        </h4>
+        <ul class="home__list">
+          <li class="home__item">Totam rem aperiam eaque ipsa</li>
+          <li class="home__item">Sit voluptatem accusantium doloremque laudantium</li>
+          <li class="home__item">Sed ut perspiciatis, unde omnis iste natus error</li>
+        </ul>
+      </div>
+
+      <div class="home__buttons">
+        <button class="btn">Заказать</button>
+        <button class="btn btn--white">Подробнее</button>
+      </div>
+    </div>
+  </section>
+  <section id="order" class="order">
+    <div class="container order__container">
+      <h2 class="title order__title">Оформление <span class="title__highlighted">Заказа</span></h2>
+
+      <p class="order__description">
+        Перед заполнением формы ознакомьтесь с&nbsp;нашей схемой работы!
+      </p>
+
+      <ul class="cards">
+        <li class="cards__item">
+          <span class="cards__circle">
+            <svg class="cards__icon">
+              <use xlink:href="dist/images/sprite.svg#search"></use>
+            </svg>
+          </span>
+          <p class="cards__description">Lorem ipsum dolor sit amet</p>
+        </li>
+        <li class="cards__item">
+          <span class="cards__circle">
+            <svg class="cards__icon">
+              <use xlink:href="dist/images/sprite.svg#percent"></use>
+            </svg>
+          </span>
+          <p class="cards__description">Сonsecteturadipiscing elit</p>
+        </li>
+        <li class="cards__item">
+          <span class="cards__circle">
+            <svg class="cards__icon">
+              <use xlink:href="dist/images/sprite.svg#add"></use>
+            </svg>
+          </span>
+          <p class="cards__description">Sed do eiusmod tempor</p>
+        </li>
+        <li class="cards__item">
+          <span class="cards__circle">
+            <svg class="cards__icon">
+              <use xlink:href="dist/images/sprite.svg#mail-big"></use>
+            </svg>
+          </span>
+          <p class="cards__description">Esse cillum dolore eu fugiat</p>
+        </li>
+        <li class="cards__item">
+          <span class="cards__circle">
+            <svg class="cards__icon">
+              <use xlink:href="dist/images/sprite.svg#cash"></use>
+            </svg>
+          </span>
+          <p class="cards__description">Excepteur sint occaecat cupidatat non proident</p>
+        </li>
+      </ul>
+
+      <form class="form" action="/">
+        <label class="form__label">
+          <select class="form__select" name="type">
+            <option value="0">Выберите тип системы</option>
+            <option value="1">Sed ut perspiciatis</option>
+            <option value="2">Nemo enim ipsam</option>
+            <option value="3">Et harum quidem</option>
+            <option value="4">Temporibus autem</option>
+            <option value="5">Itaque earum rerum</option>
+          </select>
+        </label>
+        <label class="form__label">
+          <input class="form__inp" type="email">
+        </label>
+        <label class="form__label">
+          <input class="form__inp" type="text">
+        </label>
+        <label class="form__label">
+          <svg class="form__icon">
+            <use xlink:href="dist/images/sprite.svg#mail"></use>
+          </svg>
+          <input class="form__inp form__inp--file" type="file">
+        </label>
+        <label class="form__label">
+          <span class="form__line">
+            <span class="form__name">Sed ut perspiciatis, unde omnis iste natus</span>
+            <span class="form__value">0%</span>
+          </span>
+          <input class="form__inp form__inp--range" type="range" value="0" min="0" max="100">
+        </label>
+        <button class="btn js-btn-submit" type="submit">Отправить</button>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <span class="footer__copyright">&copy;&nbsp;2018 &laquo;LoremIpsum.net&raquo; Все права защищены.</span>
+  <div class="footer__pays">
+    <span class="footer__pay">
+      <svg class="footer__icon">
+        <use xlink:href="dist/images/sprite.svg#qiwi"></use>
+      </svg>
+    </span>
+    <span class="footer__pay">
+      <svg class="footer__icon">
+        <use xlink:href="dist/images/sprite.svg#yandex"></use>
+      </svg>
+    </span>
+    <span class="footer__pay">
+      <svg class="footer__icon">
+        <use xlink:href="dist/images/sprite.svg#webmoney"></use>
+      </svg>
+    </span>
+  </div>
+  <ul class="footer__list">
+    <li class="footer__item">
+      <a href="mailto:info@ipsum228.com" class="footer__link">
+        <svg class="footer__icon">
+          <use xlink:href="dist/images/sprite.svg#mail"></use>
+        </svg>
+        info@ipsum228.com
+      </a>
+    </li>
+    <li class="footer__item">
+      <a href="/vk" class="footer__link" target="_blank">
+        <svg class="footer__icon">
+          <use xlink:href="dist/images/sprite.svg#vk"></use>
+        </svg>
+        Мы&nbsp;вконтакте
+      </a>
+    </li>
+  </ul>
+</footer>
 </body>
 </html>
