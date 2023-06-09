@@ -1,0 +1,56 @@
+@import 'fonts';
+
+/* critical:start */
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: unset;
+  padding: unset;
+  border: none;
+  outline: none;
+}
+
+input {
+  border: none;
+  padding: unset;
+  outline: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 40px;
+  max-width: 1440px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+:root {
+  --main-color: #272733;
+}
+/* critical:end */
