@@ -1,0 +1,51 @@
+@import "mixins";
+
+.burger {
+  position: relative;
+  display: none;
+  height: 4rem;
+  width: 4rem;
+
+  & > * {
+    pointer-events: none;
+  }
+
+  &__btn {
+    height: 4rem;
+    width: 4rem;
+    transition: var(--transition-opacity);
+
+    &--close {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &--active &__btn--open {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &--active &__btn--close {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  @include tablet {
+    display: block;
+
+    @include mobile {
+      height: 2rem;
+      width: 2rem;
+
+      &__btn {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+}

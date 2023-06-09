@@ -1,0 +1,64 @@
+@import "mixins";
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-size: 1.3rem;
+  transition: var(--transition-color), var(--transition-background-color), var(--transition-border);
+  cursor: pointer;
+
+  &--white {
+    border: 1px solid var(--border-primary-color);
+    background-color: var(--secondary-color);
+
+    @include desktop {
+      &:hover {
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
+      }
+
+      &:active {
+        border: 1px solid var(--border-primary-color);
+        color: inherit;
+        background-color: var(--secondary-color);
+      }
+
+      &:focus-visible {
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  &--blue {
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+
+    @include desktop {
+      &:hover {
+        border: 1px solid var(--border-primary-color);
+        color: inherit;
+        background-color: var(--secondary-color);
+      }
+
+      &:active {
+        border: 1px solid var(--secondary-color);
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
+      }
+
+      &:focus-visible {
+        border: 1px solid var(--border-primary-color);
+        color: inherit;
+        background-color: var(--secondary-color);
+      }
+    }
+  }
+}

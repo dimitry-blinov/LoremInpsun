@@ -1,18 +1,35 @@
-@import 'fonts';
+@import 'mixins';
 
 /* critical:start */
 html {
-  padding: 0;
-  margin: 0;
+  @include desktop {
+    @include fluidFontSize(10px, 28px, 1920px, $desktop-max-width);
+  };
+  @include tablet {
+    @include fluidFontSize(10px, 24px, 768px, 1920px);
+  };
+  @include mobile {
+    font-size: calcFluidFontSize(10px, 18px, 320px, $desktop-width);
+  };
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  --scroll-behavior: smooth;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-}
-
-* {
+  font-family: 'Lato', sans-serif;
+  color: #000000;
   outline: none;
-  box-sizing: border-box;
 }
 
 button {
@@ -34,23 +51,27 @@ select,
 textarea {
   font-family: inherit;
   font-size: 100%;
-  line-height: 1.15;
   margin: 0;
 }
 
-.container {
-  position: relative;
-  margin: 0 auto;
-  padding: 0 40px;
-  max-width: 1440px;
-}
-
 a {
-  display: block;
   text-decoration: none;
+  color: inherit;
+  outline: none;
 }
 
 :root {
   --main-color: #272733;
+  --primary-color: #3E9CDC;
+  --secondary-color: #FFFFFF;
+  --thirdly-color: #3D4050;
+  --border-primary-color: #6F6D7B;
+  --border-secondary-color: #286690;
+  --text-color: #BBBBBB;
+  --transition-color: color .3s ease-in-out;
+  --transition-border: border .3s ease-in-out;
+  --transition-opacity: opacity .3s ease-in-out;
+  --transition-transform: transform .3s ease-in-out;
+  --transition-background-color: background-color .3s ease-in-out;
 }
 /* critical:end */

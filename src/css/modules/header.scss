@@ -1,0 +1,58 @@
+@import 'mixins';
+
+/* critical:start */
+  .header {
+    position: fixed;
+    padding: 3rem 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--main-color);
+    opacity: 0.9;
+    z-index: 5;
+
+    @include mobile {
+      padding: 1.5rem 0;
+    }
+
+    &__container {
+      @include container;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__logobox {
+      display: block;
+      height: 3.5rem;
+      width: 24.7rem;
+      transition: var(--transition-opacity);
+
+      @include desktop {
+        &:hover {
+          opacity: 0.7;
+          transition: var(--transition-opacity);
+        }
+        &:active {
+          opacity: 1;
+          transition: var(--transition-opacity);
+        }
+        &:focus-visible {
+          opacity: 0.7;
+          transition: var(--transition-opacity);
+        }
+      }
+
+      @include mobile {
+        height: 2rem;
+        width: 15rem;
+      }
+    }
+
+    &__logo {
+      height: 100%;
+      width: 100%;
+    }
+  }
+/* critical:end */
