@@ -15,8 +15,7 @@ html {
   scroll-behavior: smooth;
   --scroll-behavior: smooth;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5rem;
+  line-height: 2.4rem;
 }
 
 *,
@@ -67,6 +66,11 @@ a {
   --thirdly-color: #3D4050;
   --border-primary-color: #6F6D7B;
   --border-secondary-color: #286690;
+  --border---thirdly-color: #C3C3C3;
+  --background---primary-color: rgba(255, 255, 255, 0.85);
+  --background---secondary-color: rgba(40, 102, 144, 1);
+  --background---thirdly-color: rgba(61, 64, 80, 0.85);
+  --colors-animation: rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2);
   --text-color: #BBBBBB;
   --transition-color: color .3s ease-in-out;
   --transition-border: border .3s ease-in-out;

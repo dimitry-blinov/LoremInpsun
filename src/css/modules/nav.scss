@@ -44,9 +44,9 @@
   }
 
   &__link {
+    @include font-size-height(1.3rem, 1.6rem);
+
     padding: 1.5rem;
-    font-size: 1.3rem;
-    line-height: 1.6rem;
     text-transform: uppercase;
     color: var(--secondary-color);
     transition: var(--transition-color);
@@ -57,5 +57,4 @@
   }
 
 }
-
 /* critical:end */

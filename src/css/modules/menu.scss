@@ -4,10 +4,10 @@
   display: none;
 
   @include tablet {
+    @include size(100vh, 100%);
+
     position: fixed;
     display: block;
-    height: 100vh;
-    width: 100%;
     transform: translateX(100%);
     background: var(--main-color);
     opacity: 0;
@@ -27,14 +27,13 @@
 
     padding: 14rem 1.5rem;
 
-    @media (max-width: 768px) {
+    @include mobile {
       padding: 7rem 1.5rem;
     }
   }
 
   &__item {
     width: fit-content;
-    font-size: 2rem;
 
     &:not(:last-child) {
       margin-bottom: 2.5rem;
@@ -50,9 +49,9 @@
   }
 
   &__link {
+    @include font-size-height(1.3rem, 1.6rem);
+
     padding: 1.5rem;
-    font-size: 1.3rem;
-    line-height: 1.6rem;
     text-transform: uppercase;
     color: var(--secondary-color);
     transition: var(--transition-color);

@@ -5,7 +5,7 @@
   grid-gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
 
-  @media (max-width: 1024px) {
+  @include tablet {
     grid-auto-flow: dense;
     grid-template-columns: repeat(2, 1fr);
 
@@ -22,6 +22,8 @@
     outline: none;
 
     &--file {
+      display: flex;
+      align-items: center;
       padding: 1rem;
       border: 1px solid var(--primary-color);
     }
@@ -31,17 +33,17 @@
 
       @include mobile {
         grid-column: 1;
+        height: 5.8rem;
       }
     }
   }
 
   &__inp {
-    width: 100%;
-    height: 100%;
+    @include size(100%, 100%);
+    @include font-size-height(1.8rem, 2.2rem);
+
     border: 1px solid var(--secondary-color);
-    background: rgba(255, 255, 255, 0.85);
-    font-size: 1.8rem;
-    line-height: 2.2rem;
+    background: var(--background---primary-color);
     border-radius: 3px;
     transition: var(--transition-background-color);
 
@@ -62,50 +64,41 @@
     }
 
     &[type='range'] {
-      position: absolute;
-      pointer-events: none;
-      opacity: 0;
-      height: fit-content;
-      max-width: 100%;
-      z-index: -1;
+      @include visually-hidden
     }
 
     &::placeholder {
+      @include font-size-height(1.8rem, 2.2rem);
+
       display: flex;
       align-items: center;
-      font-size: 1.8rem;
-      line-height: 2.2rem;
       color: var(--main-color);
     }
 
     &[type='file'] {
-      position: absolute;
-      display: none;
-      top: 0;
-      opacity: 0;
-      visibility: hidden;
-      z-index: -1;
+      @include visually-hidden;
     }
   }
 
   &__icon {
+    @include size(2rem, 2rem);
+
     margin-right: 1rem;
-    height: 2rem;
-    width: 2rem;
   }
 
   &__name {
+    @include font-size-height(1.5rem, 1.9rem);
+
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    line-height: 1.9;
   }
 
   &__btn {
+    @include font-size-height(1.5rem, 1.9rem);
+
+    margin-top: 1rem;
     grid-column: 2 / 3;
-    font-size: 1.5rem;
-    line-height: 1.9rem;
     height: 4.8rem;
 
     @include tablet {

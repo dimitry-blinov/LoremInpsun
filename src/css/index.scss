@@ -20,23 +20,21 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  @media (max-width: 1024px) {
+  @include tablet {
     background-image: url("../../dist/images/main-bg-mobile.webp");
 
-    @media (max-width: 768px) {
+    @include mobile {
       padding: 10rem 0 5rem;
     }
   }
 
-  @media
-  (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     background-image: url("../../dist/images/main-bg@2x.webp");
 
-      @include tablet {
+    @include tablet {
       background-image: url("../../dist/images/main-bg-mobile@2x.webp");
     }
   }
-
 
   &__container {
     @include container;
@@ -44,39 +42,36 @@
 
   &__title {
     @include reset-title;
+    @include font-size-height(4.8rem, 5.6rem);
 
     margin-bottom: 8rem;
     max-width: 78rem;
-    font-size: 4.8rem;
     font-weight: 700;
-    line-height: 5.6rem;
     text-transform: uppercase;
 
     &--highlighted {
       color: var(--primary-color);
     }
 
-    @media (max-width: 768px) {
+    @include mobile {
+      @include font-size-height(2.8rem, 3.2rem);
       margin-bottom: 4rem;
-      font-size: 2.8rem;
-      line-height: 3.2rem;
     }
   }
 
   &__header {
     @include reset-title;
+    @include font-size-height(2rem, 2.4rem);
 
     margin-bottom: 1rem;
-    font-size: 2rem;
     font-weight: 700;
-    line-height: 2.4rem;
   }
 
   &__info {
     margin-bottom: 8rem;
     max-width: 54rem;
 
-    @media (max-width: 768px) {
+    @include mobile {
       margin-bottom: 4rem;
     }
   }
@@ -86,8 +81,7 @@
   }
 
   &__item {
-    font-size: 2rem;
-    line-height: 2.4rem;
+    @include font-size-height(2rem, 2.4rem);
 
     &::before {
       content: '-';
@@ -111,15 +105,16 @@
       margin-right: 3rem;
     }
 
-      @include tablet {
+    @include tablet {
       & {
-        min-width: calc((100% - 3rem)/2);
+        min-width: calc((100% - 3rem) / 2);
       }
     }
   }
 
 
 }
+
 /* critical:end */
 
 /* ORDER */
@@ -131,19 +126,18 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @media (max-width: 1024px) {
+  @include tablet {
     background-image: url("../../dist/images/order-mask-mobile.webp");
 
-    @media (max-width: 768px) {
+    @include mobile {
       padding: 5rem 0;
     }
   }
 
-  @media
-  (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  @media(-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     background-image: url("../../dist/images/order-mask@2x.webp");
 
-      @include tablet {
+    @include tablet {
       background-image: url("../../dist/images/order-mask-mobile@2x.webp");
     }
   }
@@ -154,10 +148,9 @@
 
   &__title {
     @include reset-title;
+    @include font-size-height(3.6rem, 4.2rem);
 
     margin-bottom: 3rem;
-    font-size: 3.6rem;
-    line-height: 4.2rem;
     text-transform: uppercase;
     text-align: center;
     color: var(--secondary-color);
@@ -166,25 +159,23 @@
       color: var(--primary-color);
     }
 
-    @media (max-width: 768px) {
-      font-size: 2.2rem;
-      line-height: 2.4rem;
+    @include mobile {
+      @include font-size-height(2.2rem, 2.4rem);
     }
   }
 
   &__description {
     @include reset-description;
+    @include font-size-height(1.8rem, 2.2rem);
 
     margin-bottom: 8rem;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
     text-align: center;
     color: var(--text-color);
 
-    @media (max-width: 768px) {
+    @include mobile {
+      @include font-size-height(1.4rem, 1.6rem);
+
       margin-bottom: 4rem;
-      font-size: 1.4rem;
-      line-height: 1.6rem;
     }
   }
 
@@ -198,10 +189,10 @@
     grid-gap: 3rem;
     margin-bottom: 8rem;
 
-      @include tablet {
+    @include tablet {
       grid-template-columns: repeat(2, 1fr);
 
-        @include mobile {
+      @include mobile {
         margin-bottom: 4rem;
       }
     }
@@ -214,47 +205,43 @@
   }
 
   &__circle {
+    @include size(10rem, 10rem);
+
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
-    height: 10rem;
-    width: 10rem;
     background: var(--primary-color);
     border: 5px solid var(--border-secondary-color);
     border-radius: 100%;
 
-    @media (max-width: 768px) {
+    @include mobile {
+      @include size(5rem, 5rem);
+
       margin-bottom: 1rem;
-      height: 5rem;
-      width: 5rem;
       background: var(--primary-color);
       border: 2px solid var(--border-secondary-color);
     }
   }
 
   &__icon {
-    height: 5.5rem;
-    width: 5.5rem;
+    @include size(5.5rem, 5.5rem);
 
-    @media (max-width: 768px) {
-      height: 2rem;
-      width: 2rem;
+    @include mobile {
+      @include size(2rem, 2rem);
     }
   }
 
   &__text {
     @include reset-description;
+    @include font-size-height(1.6rem, 2rem);
 
-    font-size: 1.6rem;
-    line-height: 2rem;
     color: var(--secondary-color);
     text-align: center;
 
-    @media (max-width: 768px) {
-      font-size: 1.4rem;
-      line-height: 1.6rem;
+    @include mobile {
+      @include font-size-height(1.4rem, 1.6rem);
     }
   }
 
@@ -265,13 +252,13 @@
   }
 
   &__dot {
+    @include size(6px, 11rem);
+
     position: absolute;
     left: calc(100% + 2rem);
     display: block;
-    $colors: rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2);
+    $colors: var(--colors-animation);
     $opacity: 1, 0.75, 0.5, 0.25;
-    width: 11rem;
-    height: 6px;
 
     animation: wave 1s linear infinite alternate;
 

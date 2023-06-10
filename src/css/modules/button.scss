@@ -1,13 +1,14 @@
 @import "mixins";
 
 .btn {
+  @include font-size-height(1.3rem, 1.6rem);
+
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem 1rem;
   text-transform: uppercase;
   border-radius: 4px;
-  font-size: 1.3rem;
   transition: var(--transition-color), var(--transition-background-color), var(--transition-border);
   cursor: pointer;
 

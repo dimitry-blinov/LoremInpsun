@@ -1,26 +1,23 @@
 @import "mixins";
 
 .burger {
+  @include size(4rem, 4rem);
+
   position: relative;
   display: none;
-  height: 4rem;
-  width: 4rem;
 
   & > * {
     pointer-events: none;
   }
 
   &__btn {
-    height: 4rem;
-    width: 4rem;
+    @include size(4rem, 4rem);
+
     transition: var(--transition-opacity);
 
     &--close {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      visibility: hidden;
+      @include visually-hidden;
+      pointer-events: auto;
     }
   }
 
@@ -39,12 +36,10 @@
     display: block;
 
     @include mobile {
-      height: 2rem;
-      width: 2rem;
+      @include size(2rem, 2rem);
 
       &__btn {
-        height: 2rem;
-        width: 2rem;
+        @include size(2rem, 2rem);
       }
     }
   }
