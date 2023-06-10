@@ -64,18 +64,6 @@
     }
   }
 
-  @include desktop {
-    &_item:hover &__link {
-      color: var(--primary-color);
-    }
-    &_item:active &__link {
-      color: var(--secondary-color);
-    }
-    &__link:focus-visible {
-      color: var(--primary-color);
-    }
-  }
-
   &__icon {
     margin-right: 1rem;
     height: 2rem;
@@ -94,5 +82,17 @@
     line-height: 1.6rem;
     color: var(--secondary-color);
     transition: var(--transition-color);
+  }
+
+  @include desktop {
+    &__link:hover {
+      color: var(--primary-color);
+    }
+    &__link:active {
+      color: var(--secondary-color);
+    }
+    &__link:focus-visible {
+      color: var(--primary-color);
+    }
   }
 }
